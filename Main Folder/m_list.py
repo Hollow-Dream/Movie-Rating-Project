@@ -1,5 +1,12 @@
 from storage import load_movies, save_movies
 
+
+#This file is the movie list UI for the movie rating app
+
+#This file has a listing function and a loop that manages and stores movies
+
+
+
 def list_movies(movies):
     if not movies:
         print("No movies found.")
