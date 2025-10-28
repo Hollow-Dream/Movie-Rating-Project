@@ -4,6 +4,12 @@ from m_list import list_movies
 from edit import edit_movie
 from m_delete import delete_movie
 
+#We pull functions from all the different py files to run the entire app in one file, the main.py file. 
+#We do this to both organize and make the code clean and readable
+
+
+#This function, def main, serves as the main menu for the app. It also uses every other function from all the other files to run.
+
 def main():
     movies = load_movies()
     while True:
@@ -34,4 +40,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
