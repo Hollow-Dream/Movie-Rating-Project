@@ -20,6 +20,8 @@ def list_movies(movies):
     print()
 
 
+#We added def main to these files to allow for testing whenever we want to add new functions or debug
+
 def main():
     movies = load_movies()
     while True:
