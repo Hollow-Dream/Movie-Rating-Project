@@ -1,5 +1,9 @@
 from storage import load_movies, save_movies
 
+#This file is only for adding movies, and whenever you add a movie it automatically saves at the end.
+#Whenever you add a movie you will always be asked to enter the title, and then a rating between 1-5
+#If you dont put a number between 1-5 it will say "it mist be between 1 and 5"
+
 def add_movie(movies):
     title = input("Enter movie title: ").strip()
     while True:
@@ -14,6 +18,8 @@ def add_movie(movies):
     movies.append({"title": title, "rating": rating})
     print(f"Added '{title}' with rating {rating}.")
     save_movies(movies)
+
+#added def main for debugging and testing purposes.
 
 def main():
     movies = load_movies()
