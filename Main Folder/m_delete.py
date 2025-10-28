@@ -1,6 +1,9 @@
 from storage import load_movies, save_movies
 from m_list import list_movies
 
+
+#this file is used to delete movies, nothing else. It still pulls the save and load functions but only so that after you do the deleting function it saves what you did.
+
 def delete_movie(movies):
     if not movies:
         print("No movies to delete.")
@@ -20,6 +23,9 @@ def delete_movie(movies):
             print("Invalid movie number.")
     except ValueError:
         print("Please enter a valid number.")
+
+
+#again added def main for debugging and testing
 
 
 def main():
