@@ -2,6 +2,11 @@ from storage import load_movies, save_movies
 from m_list import list_movies
 
 
+#This file is made for editing movies, save movies is used so that after you edit a movie it saves automatically.
+#If there are no movies to edit it returns you to the main menu
+#If there are movies, it asks you to enter the movie number so that you can edit
+#Afterwards you are able to edit the name and the rating
+
 def edit_movie(movies):
     if not movies:
         print("No movies to edit.")
@@ -32,6 +37,9 @@ def edit_movie(movies):
             print("Invalid movie number.")
     except ValueError:
         print("Please enter a valid number.")
+
+
+#Def main added for debugging, and testing purposes.
 
 def main():
     movies = load_movies()
