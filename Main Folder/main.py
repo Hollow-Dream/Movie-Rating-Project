@@ -13,7 +13,7 @@ from m_delete import delete_movie
 def main():
     movies = load_movies()
     while True:
-        print("=" * 40)
+        print("=" * 50)
         print("\n🎬\t Movie Rating App")
         print("=" * 50)
         print("1.\t\t Add Movie")
@@ -40,6 +40,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
