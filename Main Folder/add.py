@@ -1,9 +1,5 @@
 from storage import load_movies, save_movies
 
-#This file is only for adding movies, and whenever you add a movie it automatically saves at the end.
-#Whenever you add a movie you will always be asked to enter the title, and then a rating between 1-5
-#If you dont put a number between 1-5 it will say "it mist be between 1 and 5"
-
 def add_movie(movies):
     title = input("Enter movie title: ").strip()
     while True:
@@ -19,18 +15,21 @@ def add_movie(movies):
     print(f"Added '{title}' with rating {rating}.")
     save_movies(movies)
 
-#added def main for debugging and testing purposes.
-
 def main():
     movies = load_movies()
     while True:
-        print("\n🎬 Movie Rating App")
+        print("="*50)
+        print("\n🎬 Movie Stocks🎬")
+        print("="*50)
         print("1. Add Movie")
         print("2. View Movies")
         print("3. Edit Movie")
         print("4. Delete Movie")
-        print("5. Save and Exit")
+        print("5. Search & Sort") 
+        print("6. Save and Exit")
+        print("="*50)
         choice = input("Choose an option: ").strip()
+
         if choice == '1':
             add_movie(movies)
         elif choice == '2':
@@ -40,6 +39,8 @@ def main():
         elif choice == '4':
             delete_movie(movies)
         elif choice == '5':
+            search_sort(movies) 
+        elif choice == '6':
             save_movies(movies)
             print("Movies saved. Goodbye!")
             break
@@ -47,4 +48,4 @@ def main():
             print("Invalid option. Please try again.")
 
 if __name__ == "__main__":
-    main()    
+    main()

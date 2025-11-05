@@ -1,9 +1,6 @@
 from storage import load_movies, save_movies
 from m_list import list_movies
 
-
-#this file is used to delete movies, nothing else. It still pulls the save and load functions but only so that after you do the deleting function it saves what you did.
-
 def delete_movie(movies):
     if not movies:
         print("No movies to delete.")
@@ -25,19 +22,21 @@ def delete_movie(movies):
         print("Please enter a valid number.")
 
 
-#again added def main for debugging and testing
-
-
 def main():
     movies = load_movies()
     while True:
-        print("\n🎬 Movie Rating App")
+        print("="*50)
+        print("\n🎬 Movie Stocks🎬")
+        print("="*50)
         print("1. Add Movie")
         print("2. View Movies")
         print("3. Edit Movie")
         print("4. Delete Movie")
-        print("5. Save and Exit")
+        print("5. Search & Sort") 
+        print("6. Save and Exit")
+        print("="*50)
         choice = input("Choose an option: ").strip()
+
         if choice == '1':
             add_movie(movies)
         elif choice == '2':
@@ -47,6 +46,8 @@ def main():
         elif choice == '4':
             delete_movie(movies)
         elif choice == '5':
+            search_sort(movies) 
+        elif choice == '6':
             save_movies(movies)
             print("Movies saved. Goodbye!")
             break
