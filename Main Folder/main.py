@@ -15,13 +15,13 @@ def main():
     while True:
         print("=" * 40)
         print("\n🎬\t Movie Rating App")
-        print("=" * 40)
+        print("=" * 50)
         print("1.\t\t Add Movie")
         print("2.\t\t View Movies")
         print("3.\t\t Edit Movie")
         print("4.\t\t Delete Movie")
         print("5.\t\t Save and Exit")
-        print("=" * 40)
+        print("=" * 50)
         choice = input("Choose an option: ").strip()
         if choice == '1':
             add_movie(movies)
@@ -40,5 +40,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
